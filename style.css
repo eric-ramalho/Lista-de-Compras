@@ -1,5 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@keyframes shadow-pop-tr {
+  0% {
+    box-shadow: 0 0 #b69797, 0 0 #b69797, 0 0 #b69797, 0 0 #b69797, 0 0 #b69797,
+      0 0 #b69797, 0 0 #b69797, 0 0 #b69797;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    box-shadow: 1px -1px #b69797, 2px -2px #b69797, 3px -3px #b69797,
+      4px -4px #b69797, 5px -5px #b69797, 6px -6px #b69797, 7px -7px #b69797,
+      8px -8px #b69797;
+    transform: translateX(-8px) translateY(8px);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100vw;
+  background-color: #f4f5fb;
+}
+
+label {
+  font-weight: 700;
+}
+
+/* ajustando a logo */
+.container {
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+/* Ajustando a logo para devices */
+@media (width < 26.9375rem) {
+  .container {
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+/* Configurando o form */
+#form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  gap: 0.5rem;
+  & #newItem {
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  & label {
+    display: none;
+  }
+  & #newItem {
+    padding: 1rem;
+    width: 39.1875rem;
+    height: 2.75rem;
+    border-radius: 0.9375rem;
+    border: solid 0.0625rem #a7a7a7;
+  }
+  & #btn {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: rgb(255, 146, 83);
+    border: none;
+    border-radius: 15px;
+    width: 160px;
+    height: 44px;
+    align-items: center;
+  }
+  & #btn:hover {
+    background-color: #ffcccc;
+    cursor: pointer;
+  }
+}
+@media (width < 26.9375rem) {
+  #form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    & #newItem {
+      margin-top: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    & label {
+      display: flex;
+    }
+    & #newItem,
+    #btn {
+      padding: 1rem;
+      width: 20rem;
+      height: 2.75rem;
+      border-radius: 15px;
+      border: solid 1px #a7a7a7;
+    }
+    & #btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      border: none;
+      cursor: pointer;
+      background-color: rgb(255, 146, 83);
+    }
+
+    & .shadow-pop-tr:hover {
+      animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+      background-color: #3e3e3e;
+    }
+  }
 }
