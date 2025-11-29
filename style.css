@@ -49,16 +49,12 @@ label {
 
 /* Configurando o form */
 #form {
+  width: 100%;
+  max-width: calc(39.1875rem + 160px + 1rem);
+  margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-
   gap: 0.5rem;
-  & #newItem {
-    margin-top: 0.3rem;
-    margin-bottom: 1rem;
-    align-items: center;
-  }
+
   & label {
     display: none;
   }
@@ -68,6 +64,7 @@ label {
     height: 2.75rem;
     border-radius: 0.9375rem;
     border: solid 0.0625rem #a7a7a7;
+    align-items: center;
   }
   & #btn {
     display: flex;
@@ -80,8 +77,9 @@ label {
     height: 44px;
     align-items: center;
   }
-  & #btn:hover {
-    background-color: #ffcccc;
+  & .shadow-pop-tr:hover {
+    animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    background-color: #3e3e3e;
     cursor: pointer;
   }
 }
@@ -114,10 +112,8 @@ label {
       cursor: pointer;
       background-color: rgb(255, 146, 83);
     }
-
     & .shadow-pop-tr:hover {
-      animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-      background-color: #3e3e3e;
+      animation: none;
     }
   }
 }
