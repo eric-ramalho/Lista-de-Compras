@@ -66,7 +66,7 @@ label {
     border: solid 0.0625rem #a7a7a7;
     align-items: center;
   }
-  & #btn {
+  & #btn-send {
     display: flex;
     justify-content: center;
     color: white;
@@ -96,14 +96,14 @@ label {
       display: flex;
     }
     & #newItem,
-    #btn {
+    #btn-send {
       padding: 1rem;
       width: 20rem;
       height: 2.75rem;
       border-radius: 15px;
       border: solid 1px #a7a7a7;
     }
-    & #btn {
+    & #btn-send {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -254,7 +254,11 @@ li {
 /* Item removido */
 
 .removed {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+
   width: 627px;
   justify-content: space-between;
   background-color: rgb(238, 185, 149);
@@ -263,8 +267,21 @@ li {
   color: rgb(44, 44, 44);
   padding: 1rem;
   border-radius: 10px;
-  & div {
-    display: flex;
-    gap: 1rem;
-  }
+  display: flex;
+}
+
+.removed div {
+  display: flex;
+  gap: 1rem;
+}
+
+.removed.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.completed h2 {
+  text-decoration: line-through;
+  opacity: 0.6;
 }

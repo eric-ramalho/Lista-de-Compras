@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de compras</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -19,136 +20,19 @@
     <form id="form">
       <label for="newItem">Item</label>
       <input id="newItem" type="text" placeholder="Adicione um novo item">
-      <button class="shadow-pop-tr" id="btn" type="submit">Adicionar Item</button>
+      <button class="shadow-pop-tr" id="btn-send" type="submit">Adicionar Item</button>
     </form>
   </div>
 
   <div class="container">
     <div class="container-ul">
-      <ul>
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
+      <ul id="list">
 
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
-
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
-
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
-
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
-
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
-
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
-
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
-
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
-
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
-
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
-
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
-
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
-
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
-        <li id="item-1">
-          <div>
-            <input type="checkbox" name="checkbox-concluido" id="checkbox-concluido">
-            <h2>Pão de forma</h2>
-          </div>
-
-          <button><img src="assets/icons/bin.svg" alt=""></button>
-
-        </li>
       </ul>
     </div>
   </div>
   <div class=" container">
-    <div class="removed">
+    <div class="removed" id="removedMessage">
       <div>
         <img src="/assets/icons/error.svg" alt="">
         <p>O item foi removido da lista</p>
