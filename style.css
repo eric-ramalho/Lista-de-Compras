@@ -250,3 +250,21 @@ li {
     }
   }
 }
+
+/* Item removido */
+
+.removed {
+  display: none;
+  width: 627px;
+  justify-content: space-between;
+  background-color: rgb(238, 185, 149);
+  height: 44px;
+  align-items: center;
+  color: rgb(44, 44, 44);
+  padding: 1rem;
+  border-radius: 10px;
+  & div {
+    display: flex;
+    gap: 1rem;
+  }
+}
